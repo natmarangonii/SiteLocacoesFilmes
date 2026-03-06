@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinexperience</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <h1>Cinexperience - Cadastrar Filmes</h1>
+        <button onclick="abrirModal()">+ Novo Filme</button>
+        <input type="text" id="filtrar" placeholder="Buscar por gênero">
+        <button class = "buscar" onclick="buscarPorGenero()">Buscar</button>
+        <button onclick="mostrarTodos()">Mostrar Todos</button>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                     <th>Capa</th>
+                    <th>Titulo</th>
+                    <th>Gênero</th>
+                    <th>Ano</th>
+                    <th>Classificação</th>
+                    <th>Produtora</th>
+                </tr>
+            </thead>
+            <tbody id="dados"></tbody>
+        </table>
+    </main>
+    <!--Modal-->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Novo Filme</h2>
+            <input type="text" id="capa" placeholder="Colocar URL da foto">
+            <input type="text" id="nome" placeholder="Nome">
+            <input type="text" id="genero" placeholder="Genero">
+            <input type="text" id="ano" placeholder="Ano">
+            <input type="text" id="classificacao" placeholder="Classificacao">
+            <input type="text" id="produtora" placeholder="Produtora">
+            
+            <div class="modal-buttons">
+                <button onclick="salvarFilme()">Salvar</button>
+                <button onclick="fecharModal()">Cancelar</button>                
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
